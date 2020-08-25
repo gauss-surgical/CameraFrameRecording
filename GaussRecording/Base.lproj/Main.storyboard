@@ -69,8 +69,17 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="cCD-Zl-HYy">
                                 <rect key="frame" x="0.0" y="88" width="414" height="768"/>
                                 <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select image(s) for 'Save to Disk'" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3JQ-Xn-AzD">
+                                        <rect key="frame" x="20.5" y="0.0" width="373" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="he4-A4-dfm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="cHs-Wz-mfQ">
-                                        <rect key="frame" x="20.5" y="0.0" width="373" height="678"/>
+                                        <rect key="frame" x="20.5" y="50" width="373" height="628"/>
                                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="EnG-v0-Yoh">
                                             <size key="itemSize" width="165" height="330"/>
@@ -144,7 +153,8 @@
                                     </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="cHs-Wz-mfQ" firstAttribute="height" secondItem="cCD-Zl-HYy" secondAttribute="height" constant="-90" id="MIk-WL-hOD"/>
+                                    <constraint firstItem="cHs-Wz-mfQ" firstAttribute="height" secondItem="cCD-Zl-HYy" secondAttribute="height" constant="-140" id="MIk-WL-hOD"/>
+                                    <constraint firstItem="3JQ-Xn-AzD" firstAttribute="width" secondItem="cCD-Zl-HYy" secondAttribute="width" multiplier="0.9" id="PXY-ay-Wmm"/>
                                     <constraint firstItem="b4N-OC-rtk" firstAttribute="width" secondItem="cCD-Zl-HYy" secondAttribute="width" multiplier="0.9" id="VAR-xA-zZ7"/>
                                     <constraint firstItem="cHs-Wz-mfQ" firstAttribute="width" secondItem="cCD-Zl-HYy" secondAttribute="width" multiplier="0.9" id="zlT-7V-Syp"/>
                                 </constraints>
