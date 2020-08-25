@@ -7,7 +7,7 @@ public protocol VideoCaptureDelegate: class {
 }
 
 public protocol PhotoCaptureDelegate: class {
-    func rawPhotoCapture(rawPhoto: AVCapturePhoto)
+    //func rawPhotoCapture(rawPhoto: AVCapturePhoto)
     func qrCodeDetectedInLiveFeed(qrCodeString: String) // UG TEST
 }
 

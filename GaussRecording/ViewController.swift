@@ -9,9 +9,9 @@
 import UIKit
 import AVFoundation
 class ViewController: UIViewController, VideoCaptureDelegate,PhotoCaptureDelegate {
-    func rawPhotoCapture(rawPhoto: AVCapturePhoto) {
-        print(rawPhoto)
-    }
+//    func rawPhotoCapture(rawPhoto: AVCapturePhoto) {
+//        print(rawPhoto)
+//    }
     
     func videoCapture(didCaptureVideoFrame: CMSampleBuffer) {
         latestPhoto = convertCurrentSampleBufferToUIImage(currentSampleBuffer: didCaptureVideoFrame)
@@ -61,10 +61,18 @@ class ViewController: UIViewController, VideoCaptureDelegate,PhotoCaptureDelegat
     }
     
     func qrCodeDetectedInLiveFeed(qrCodeString: String) {
-        imagesWithQRCode.append(latestPhoto)
-        DispatchQueue.main.async {
-            self.stopButton.isEnabled = true
+        if imagesWithQRCode.count < 50 {
+            imagesWithQRCode.append(latestPhoto)
+            DispatchQueue.main.async {
+                self.stopButton.isEnabled = true
+            }
+        } else {
+            videoCapture.stop()
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "ShowImages", sender: self)
+            }
         }
+        
     }
     
     @IBAction func stopRecording(_ sender: Any) {
