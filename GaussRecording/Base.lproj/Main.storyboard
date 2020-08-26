@@ -98,9 +98,15 @@
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uuG-kl-VCL">
                                                             <rect key="frame" x="0.0" y="0.0" width="165" height="292"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="292" id="CI0-qV-951"/>
-                                                                <constraint firstAttribute="width" constant="165" id="bcv-ha-QqV"/>
+                                                                <constraint firstAttribute="height" constant="300" id="CI0-qV-951"/>
+                                                                <constraint firstAttribute="width" constant="170" id="bcv-ha-QqV"/>
                                                             </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                    <integer key="value" value="10"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                            </userDefinedRuntimeAttributes>
                                                         </imageView>
                                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1ZW-qF-vEg">
                                                             <rect key="frame" x="127" y="244" width="30" height="30"/>
